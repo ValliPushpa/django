@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+    body{
+            /* text-align:center; */
+            margin:5% 40%;
+            background-image: url("https://s3-us-west-2.amazonaws.com/i.cdpn.io/161331.etbfE.351dd3c0-3d59-43d1-8b14-086df1a21875.png");
+            background-repeat: no-repeat;
+            background-size:cover; 
+        }
+    #submit{
+        margin-left: 40%;
+    }
+</style>
+<body>
+    {% load bootstrap3 %}
+    <form method="post">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <input id = "submit" type="submit" value="Submit"> 
+    </form>
+    {% if check %}
+        <p>Invalid Credentials</p>
+    {% endif %}
+</body>
+
+
+
+
+
+
